@@ -7,217 +7,300 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="top-bar">
-    <div class="container top-bar__content">
-      <div class="top-bar__contact">
-        <span>info@karam-charity.org</span>
-        <span>00962 7 9551 1398</span>
+  <div class="header-wrapper">
+    <header class="top-bar">
+      <div class="container top-bar__content">
+        <div class="top-bar__info">
+          <span class="contact-label">للتواصل:</span>
+          <span class="phone-number">077594312</span>
+        </div>
+        <div class="top-bar__links">
+          <a href="https://www.facebook.com/Alkiram.jo/?locale=ar_AR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="top-bar__social">
-        <a href="#" aria-label="Facebook">فيسبوك</a>
-        <a href="#" aria-label="Instagram">انستغرام</a>
-        <a href="#" aria-label="YouTube">يوتيوب</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <nav class="navbar">
-    <div class="container nav-content">
-      <div class="logo">جمعية الكرام</div>
-      <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
-      <ul class="nav-links">
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#about">عن الجمعية</a></li>
-        <li><a href="#programs">البرامج</a></li>
-        <li><a href="#activities">الأنشطة</a></li>
-        <li><a href="#stats">الأرقام</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar">
+      <div class="container nav-content">
+        <div class="brand">
+          <span class="brand__name">جمعية الكرام</span>
+          <span class="brand__tag">للأسر العفيفة والأيتام</span>
+        </div>
+        <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+        <ul class="nav-links">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#impact">الأثر</a></li>
+          <li><a href="#initiatives">المبادرات</a></li>
+          <li><a href="#programs">البرامج</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <main>
     <section id="home" class="hero">
-      <div class="hero__overlay"></div>
       <div class="container hero__content">
-        <div class="hero__text">
-          <p class="hero__eyebrow">معًا نصنع أثرًا دائمًا</p>
-          <h1>اكفل يتيمًا وكن عونًا ومعينًا</h1>
+        <div class="hero__copy">
+          <p class="hero__eyebrow">معًا نصنع فرقًا دائمًا</p>
+          <h1>جمعية الكرام للأسر العفيفة والأيتام الخيرية</h1>
           <p>
-            جمعية الكرام للأسر العفيفة والأيتام الخيرية تعمل على تمكين الأسر المحتاجة
-            برعاية شاملة تشمل التعليم والصحة والتمكين الاقتصادي.
+            نؤمن بأن كل أسرة تستحق حياة كريمة. نسعى لتوفير الرعاية، التعليم، والدعم
+            الاقتصادي للأيتام والأسر المتعففة عبر برامج متكاملة ومستدامة.
           </p>
           <div class="hero__actions">
-            <a class="btn primary" href="#contact">تبرع الآن</a>
-            <a class="btn ghost" href="#programs">تعرّف على البرامج</a>
+            <a class="btn outline" href="#programs">اطّلع على البرامج</a>
           </div>
         </div>
-        <div class="hero__slider">
-          <div class="slider">
-            <img
-              id="slider-image"
-              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
-              alt="مبادرات جمعية الكرام"
-            />
-            <div class="slider__caption" id="slider-caption">رعاية شاملة للأيتام والأسر العفيفة</div>
-            <div class="slider__controls">
-              <button id="prev-slide" aria-label="السابق">‹</button>
-              <div class="slider__dots" id="slider-dots"></div>
-              <button id="next-slide" aria-label="التالي">›</button>
+        <div class="hero__visual">
+          <div class="hero-card">
+            <div class="hero-card__slider">
+              <div class="hero-slide active">
+                <img
+                  src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80"
+                  alt="سلال غذائية شهرية"
+                />
+                <div class="hero-card__info">
+                  <h3>سلال غذائية شهرية</h3>
+                  <p>نصل إلى الأسر الأشد حاجة من خلال دعم غذائي منتظم.</p>
+                </div>
+              </div>
+              <div class="hero-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80"
+                  alt="كفالة أيتام"
+                />
+                <div class="hero-card__info">
+                  <h3>كفالة أيتام</h3>
+                  <p>رعاية شاملة توفر التعليم والصحة والدعم النفسي للأيتام.</p>
+                </div>
+              </div>
+              <div class="hero-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+                  alt="حقيبة مدرسية"
+                />
+                <div class="hero-card__info">
+                  <h3>حقيبة مدرسية</h3>
+                  <p>تجهيز كامل للطلاب بالحقائب والقرطاسية قبل بداية العام الدراسي.</p>
+                </div>
+              </div>
+              <div class="hero-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1483648969698-5e7dcaa3444f?auto=format&fit=crop&w=1200&q=80"
+                  alt="كسوة الشتاء"
+                />
+                <div class="hero-card__info">
+                  <h3>كسوة الشتاء</h3>
+                  <p>توفير الملابس الشتوية والبطانيات للأسر المحتاجة في فصل الشتاء.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
             </div>
           </div>
-          <noscript>
-            <p class="slider__noscript">يرجى تفعيل الجافا سكربت لعرض الشرائح التفاعلية.</p>
-          </noscript>
+          <div class="hero-stats">
+            <div>
+              <strong>1400+</strong>
+              <span>أسرة مستفيدة</span>
+            </div>
+            <div>
+              <strong>620</strong>
+              <span>أيتام مكفولون</span>
+            </div>
+            <div>
+              <strong>87</strong>
+              <span>مشروع تمكين</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="activities" class="section">
+    <section id="impact" class="section impact">
       <div class="container">
         <div class="section-title">
-          <h2>الأنشطة والفعاليات</h2>
-          <p>نماذج من أنشطتنا التي تعكس روح العطاء والتكافل.</p>
+          <h2>أثرنا في المجتمع</h2>
+          <p>نقيس الأثر بالأرواح التي تحسنت جودة حياتها.</p>
         </div>
-        <div class="cards grid-3">
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80" alt="توزيع طرود غذائية" />
-            <div class="card__body">
-              <h3>توزيع طرود غذائية</h3>
-              <p>وصول الدعم الغذائي للأسر العفيفة بشكل دوري ومنظم.</p>
-              <a href="#contact">اقرأ المزيد</a>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1459180129673-eefb56f79b45?auto=format&fit=crop&w=900&q=80" alt="دعم تعليمي" />
-            <div class="card__body">
-              <h3>دعم تعليمي</h3>
-              <p>توفير حقائب مدرسية ودروس تقوية للأيتام.</p>
-              <a href="#contact">اقرأ المزيد</a>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80" alt="مبادرات صحية" />
-            <div class="card__body">
-              <h3>مبادرات صحية</h3>
-              <p>حملات طبية وتوعية صحية مجانية في المجتمع المحلي.</p>
-              <a href="#contact">اقرأ المزيد</a>
-            </div>
-          </article>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <h3>رعاية شاملة</h3>
+            <p>متابعة صحية ونفسية وتعليمية مستمرة للأيتام.</p>
+          </div>
+          <div class="impact-card">
+            <h3>دعم الأسر</h3>
+            <p>مساعدات نقدية وغذائية تضمن الاستقرار المعيشي.</p>
+          </div>
+          <div class="impact-card">
+            <h3>تمكين اقتصادي</h3>
+            <p>تدريب ومشاريع صغيرة لرفع الدخل وتحقيق الاستدامة.</p>
+          </div>
+          <div class="impact-card">
+            <h3>شراكات مجتمعية</h3>
+            <p>نتعاون مع الجهات المحلية لتعظيم الأثر وتوسيع الخدمات.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="stats" class="section stats">
+    <section id="initiatives" class="section initiatives">
       <div class="container">
-        <div class="section-title light">
-          <h2>حقائق وأرقام</h2>
-          <p>أرقام تقريبية لنتائج جهودنا السنوية.</p>
+        <div class="section-title">
+          <h2>مبادراتنا الحالية</h2>
+          <p>برامج موسمية ومبادرات طارئة تصل للمستحقين بسرعة.</p>
         </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <span class="stat__number">1200+</span>
-            <span class="stat__label">أسرة مستفيدة</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">540</span>
-            <span class="stat__label">كفالة يتيم</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">320</span>
-            <span class="stat__label">منحة تعليمية</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">95</span>
-            <span class="stat__label">مشروع تمكين</span>
-          </div>
+        <div class="initiative-grid">
+          <article class="initiative">
+            <img
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80"
+              alt="كفالة الأيتام"
+            />
+            <div class="initiative__body">
+              <h3>كفالة الأيتام</h3>
+              <p>نضمن احتياجات التعليم والرعاية الصحية والاحتياجات الأساسية.</p>
+            </div>
+          </article>
+          <article class="initiative">
+            <img
+              src="https://images.unsplash.com/photo-1459180129673-eefb56f79b45?auto=format&fit=crop&w=900&q=80"
+              alt="حقيبة مدرسية"
+            />
+            <div class="initiative__body">
+              <h3>حقيبة مدرسية</h3>
+              <p>تجهيز كامل للطلاب قبل العام الدراسي الجديد.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="programs" class="section">
+    <section id="programs" class="section programs">
       <div class="container">
         <div class="section-title">
           <h2>برامج الجمعية</h2>
-          <p>نركز على برامج متكاملة لضمان استدامة الأثر.</p>
+          <p>مجموعة متكاملة من البرامج لضمان الاستمرارية.</p>
         </div>
-        <div class="programs grid-4">
-          <article class="program">
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80" alt="كفالة الأيتام" />
-            <h3>كفالة الأيتام</h3>
-            <p>رعاية شاملة تشمل التعليم والصحة والاحتياجات الأساسية.</p>
-            <button class="btn small">اقرأ المزيد</button>
-          </article>
-          <article class="program">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="افطار صائم" />
-            <h3>إفطار صائم</h3>
-            <p>توزيع وجبات صحية خلال شهر رمضان للمحتاجين.</p>
-            <button class="btn small">اقرأ المزيد</button>
-          </article>
-          <article class="program">
-            <img src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=900&q=80" alt="تمكين اقتصادي" />
-            <h3>تمكين اقتصادي</h3>
-            <p>تدريب مهني ومشاريع صغيرة للأسر المنتجة.</p>
-            <button class="btn small">اقرأ المزيد</button>
-          </article>
-          <article class="program">
-            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80" alt="إغاثة عاجلة" />
-            <h3>إغاثة عاجلة</h3>
-            <p>استجابة سريعة للحالات الإنسانية الطارئة.</p>
-            <button class="btn small">اقرأ المزيد</button>
-          </article>
+        <div class="programs-grid">
+          <div class="program-card">
+            <img src="https://i.imgur.com/wzi4q1i.jpeg" alt="أضاحي العيد" />
+            <div class="program-card__content">
+              <h3>أضاحي العيد</h3>
+              <p>توزيع لحوم الأضاحي على الأسر المحتاجة خلال عيد الأضحى المبارك.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80" alt="رحلات العمرة" />
+            <div class="program-card__content">
+              <h3>رحلات العمرة السنوية</h3>
+              <p>تنظيم رحلات عمرة مجانية للأيتام والأسر العفيفة سنوياً.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&w=800&q=80" alt="إفطار صائم" />
+            <div class="program-card__content">
+              <h3>إفطار صائم</h3>
+              <p>توزيع وجبات إفطار يومية للصائمين في شهر رمضان المبارك.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80" alt="كفالة أيتام" />
+            <div class="program-card__content">
+              <h3>كفالة أيتام</h3>
+              <p>كفالة شاملة توفر الرعاية والتعليم والصحة للأيتام.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://i.imgur.com/Io07NuC.jpeg" alt="كسوة الأيتام" />
+            <div class="program-card__content">
+              <h3>كسوة الأيتام</h3>
+              <p>توفير الملابس الجديدة للأيتام في المناسبات والأعياد.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=80" alt="شتاء دافئ" />
+            <div class="program-card__content">
+              <h3>حملة شتاء دافئ</h3>
+              <p>توزيع البطانيات والملابس الشتوية على الأسر المحتاجة.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="إيجارات البيوت" />
+            <div class="program-card__content">
+              <h3>توزيع إيجارات البيوت</h3>
+              <p>تسديد إيجارات المساكن للأسر العفيفة والمتعثرة مادياً.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="الحقائب المدرسية" />
+            <div class="program-card__content">
+              <h3>توزيع الحقائب المدرسية</h3>
+              <p>تجهيز الطلاب بالحقائب والقرطاسية قبل بداية العام الدراسي.</p>
+              <button class="btn dark">اقرأ المزيد</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <div class="container about__content">
-        <div class="about__image">
-          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80" alt="أطفال يتلقون الرعاية" />
-        </div>
-        <div class="about__text">
-          <h2>عن جمعية الكرام</h2>
-          <p>
-            تأسست جمعية الكرام للأسر العفيفة والأيتام الخيرية لتعزيز قيم التكافل
-            الاجتماعي ودعم الفئات الأكثر احتياجًا عبر برامج مستدامة ومبادرات مجتمعية.
-          </p>
-          <ul>
-            <li>رعاية تعليمية ونفسية للأيتام.</li>
-            <li>مساعدات غذائية وصحية للأسر العفيفة.</li>
-            <li>مشاريع تدريب وتمكين لزيادة الدخل.</li>
-          </ul>
-        </div>
+    <section id="donate" class="section donate">
+      <div class="container donate__content">
+        <h2>كن شريكًا في الأثر</h2>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="container">
-        <div class="section-title">
+        <div class="contact-card">
           <h2>تواصل معنا</h2>
-          <p>نسعد باستقبال تواصلكم ودعمكم.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>معلومات التواصل</h3>
-            <p>عمان - الأردن</p>
-            <p>هاتف: 00962 7 9551 1398</p>
-            <p>البريد: info@karam-charity.org</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <div>
+                <strong>العنوان:</strong>
+                <p>الأردن - المفرق - شارع البلدية</p>
+                <a href="https://maps.app.goo.gl/d1CB5SKqu88Uw1qS9" target="_blank" rel="noopener noreferrer" class="map-link">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  عرض الموقع على خرائط جوجل
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <div>
+                <strong>الهاتف:</strong>
+                <p>077595312</p>
+              </div>
+            </div>
           </div>
-          <form class="contact-form">
-            <label>
-              الاسم الكامل
-              <input type="text" placeholder="اكتب اسمك" />
-            </label>
-            <label>
-              البريد الإلكتروني
-              <input type="email" placeholder="example@email.com" />
-            </label>
-            <label>
-              رسالتك
-              <textarea rows="4" placeholder="كيف يمكننا مساعدتك؟"></textarea>
-            </label>
-            <button class="btn primary" type="submit">إرسال</button>
-          </form>
         </div>
       </div>
     </section>
@@ -228,7 +311,7 @@
       <p>© <span id="year"></span> جمعية الكرام للأسر العفيفة والأيتام الخيرية</p>
       <div class="footer__links">
         <a href="#home">الرئيسية</a>
-        <a href="#about">عن الجمعية</a>
+        <a href="#programs">البرامج</a>
         <a href="#contact">تواصل</a>
       </div>
     </div>

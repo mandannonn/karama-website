@@ -1,75 +1,9 @@
-const slides = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
-    caption: "رعاية شاملة للأيتام والأسر العفيفة",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
-    caption: "تمكين الأسر عبر مبادرات مستدامة",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
-    caption: "مبادرات تعليمية وصحية متكاملة",
-  },
-];
-
-const sliderImage = document.getElementById("slider-image");
-const sliderCaption = document.getElementById("slider-caption");
-const prevButton = document.getElementById("prev-slide");
-const nextButton = document.getElementById("next-slide");
-const dotsContainer = document.getElementById("slider-dots");
 const year = document.getElementById("year");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-let currentSlide = 0;
-
-const renderDots = () => {
-  if (!dotsContainer) {
-    return;
-  }
-  dotsContainer.innerHTML = "";
-  slides.forEach((_, index) => {
-    const dot = document.createElement("span");
-    dot.classList.add("slider__dot");
-    if (index === currentSlide) {
-      dot.classList.add("active");
-    }
-    dot.addEventListener("click", () => {
-      currentSlide = index;
-      updateSlide();
-    });
-    dotsContainer.appendChild(dot);
-  });
-};
-
-const updateSlide = () => {
-  if (!sliderImage || !sliderCaption) {
-    return;
-  }
-  sliderImage.src = slides[currentSlide].image;
-  sliderCaption.textContent = slides[currentSlide].caption;
-  renderDots();
-};
-
-const nextSlide = () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlide();
-};
-
-const prevSlide = () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateSlide();
-};
-
-if (prevButton) {
-  prevButton.addEventListener("click", prevSlide);
-}
-if (nextButton) {
-  nextButton.addEventListener("click", nextSlide);
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
 if (navToggle && navLinks) {
@@ -78,8 +12,35 @@ if (navToggle && navLinks) {
   });
 }
 
-if (year) {
-  year.textContent = new Date().getFullYear();
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+const slideInterval = 7000;
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
+
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
 }
-updateSlide();
-setInterval(nextSlide, 6000);
+
+function nextSlide() {
+  currentSlide++;
+  if (currentSlide >= slides.length) currentSlide = 0;
+  showSlide(currentSlide);
+}
+
+let autoSlide = setInterval(nextSlide, slideInterval);
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, slideInterval);
+  });
+});
